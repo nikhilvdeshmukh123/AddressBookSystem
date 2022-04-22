@@ -1,7 +1,7 @@
 package com.bridgelabz;
 /*
  * @author: Nikhil Deshnukh
- * Ability to add a New Contact in Address Book
+ * Ability to edit a Contact in Address Book with First Name
  */
 public class AddressBookSystem {
 	// main method
@@ -11,5 +11,6 @@ public class AddressBookSystem {
 		AddressBook addressBook = new AddressBook();
 		addressBook.addContact();
 		addressBook.displayContact();
+		addressBook.editContact();
 	}
 }

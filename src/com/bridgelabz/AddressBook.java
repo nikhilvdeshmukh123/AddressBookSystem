@@ -3,11 +3,11 @@ package com.bridgelabz;
 import java.util.Scanner;
 
 public class AddressBook {
-	//object of Contact class
+	// object of Contact class
 	Contact contact = new Contact();
-	//object of Scanner class for User Input
+	// object of Scanner class for User Input
 	Scanner scan = new Scanner(System.in);
-	//Method for Adding Contact
+	// Method for Adding Contact
 	public void addContact() {
 		System.out.println("Enter the First Name: ");
 		String firstName = scan.nextLine();
@@ -25,7 +25,7 @@ public class AddressBook {
 		String zip = scan.nextLine();
 		System.out.println("Enter the Email: ");
 		String email = scan.nextLine();
-		//calling set function with reference name contact
+		// calling set function with reference name contact
 		contact.setFirstName(firstName);
 		contact.setLastName(lastName);
 		contact.setMobileNo(mobileNo);
@@ -36,9 +36,24 @@ public class AddressBook {
 		contact.setEmail(email);
 		System.out.println(contact);
 	}
-	//Method for Contact Display
+	// Method for Contact Display
 	public void displayContact() {
 		String str = contact.getFirstName();
 		System.out.println("Contact: " + str);
+	}
+	//Method for edit contact
+	public void editContact() {
+		System.out.println("Please Enter original first name to edit: ");
+		String editName = scan.nextLine();
+		//If firstName equals to Entered name
+		if (editName.equalsIgnoreCase(contact.getFirstName())) {
+			addContact();
+			System.out.println("Contact Successfully Edited");
+		//If firstName not equals to Entered name
+		} else {
+			System.out.println("Invalid first name");
+			System.out.println("Please Enter valid first name");
+			editContact();
+		}
 	}
 }
