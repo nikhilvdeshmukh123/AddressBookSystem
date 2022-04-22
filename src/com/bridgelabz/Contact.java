@@ -23,7 +23,7 @@ public class Contact {
 		this.email = email;
 	}
 
-	// getters and setters
+	// getters and setters methods
 	public String getFirstName() {
 		return firstName;
 	}
@@ -90,6 +90,7 @@ public class Contact {
 	//toString
 	@Override
 	public String toString() {
-		return "Contact [firstName=" + firstName + ", lastName=" + lastName + ", mobileNo=" + mobileNo + ", address=" + address + ", city=" + city + ", state=" + state + ", zip=" + zip + ", email=" + email + "]";
+		return "Contact [firstName = " + firstName + ", lastName = " + lastName + ", mobileNo = " + mobileNo + ", address = "
+				+ address + ", city = " + city + ", state = " + state + ", zip = " + zip + ", email = " + email + "]";
 	}
 }
