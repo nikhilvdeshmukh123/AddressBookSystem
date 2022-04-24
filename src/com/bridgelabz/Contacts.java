@@ -1,6 +1,6 @@
 package com.bridgelabz;
 
-public class Contact {
+public class Contacts {
 	// declare variables
 	private String firstName;
 	private String lastName;
@@ -12,7 +12,7 @@ public class Contact {
 	private String email;
 
 	// Constructor
-	public Contact() {
+	public Contacts(String firstName2, String lastName2, String mobileNo2, String address2, String city2, String state2, String zip2, String email2) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.mobileNo = mobileNo;
@@ -91,8 +91,15 @@ public class Contact {
 	// toString
 	@Override
 	public String toString() {
-		return "Contact [firstName = " + firstName + ", lastName = " + lastName + ", mobileNo = " + mobileNo
-				+ ", address = " + address + ", city = " + city + ", state = " + state + ", zip = " + zip + ", email = "
-				+ email + "]";
+		return "----------------------------------\n" +
+                "FirstName  =  " + firstName +
+                "\nLastName   =  " + lastName +
+                "\nMobileNo    =  " + mobileNo +
+                "\nAddress       =  " + address +
+                "\nCity      =  " + city +
+                "\nState    =  " + state +
+                "\nZIP     =  " + zip +
+                "\nEmail      =  " + email +
+                "\n-----------------------------------\n";
 	}
 }
